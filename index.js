@@ -501,6 +501,12 @@ bot.catch((err, ctx) => {
   log(`Telegraf error for update ${ctx.updateType}: ${err.message}`);
 });
 
+// ─── HTTP server (for Render Web Service health checks) ──────────────────────
+const express = require('express');
+const app = express();
+app.get('/', (_req, res) => res.send('Bot is running'));
+app.listen(process.env.PORT || 3000);
+
 // ─── Start ────────────────────────────────────────────────────────────────────
 process.on('uncaughtException',  (e) => console.error('uncaughtException:', e));
 process.on('unhandledRejection', (e) => console.error('unhandledRejection:', e));
