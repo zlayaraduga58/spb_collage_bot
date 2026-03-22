@@ -1,0 +1,15 @@
+{
+  "name": "collage-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot that creates square image collages",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "telegraf": "^4.16.3",
+    "sharp": "^0.33.4",
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5"
+  }
+}
